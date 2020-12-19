@@ -17,7 +17,6 @@ ul {
 
 #navHeader li{
   display: inline-block;
-  color: red;
 }
 #navHeader ul li a{
   padding:15px 20px;
@@ -112,7 +111,7 @@ textarea {
 }
 /*//////////////////YOUR ACCOUNT/////////////////////*/
 #mainYourAccount{
-
+  
 }
 /*//////////////////ADMIN/////////////////////*/
 .tableAdmin{
