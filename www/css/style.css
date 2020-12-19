@@ -1,0 +1,150 @@
+/*////////////////LAYOUT////////////////////*/
+
+header {
+  width:100%;
+  background: #333;
+}
+
+header a{
+    font-size: 100%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#navHeader li{
+  display: inline-block;
+}
+#navHeader ul li a{
+  padding:15px 20px;
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size:1em;
+}
+
+/*///////////////ACCUEIL MIVA///////////////////*/
+
+#mhivaAccueil{
+  background-color: #5FA2D9;
+}
+
+#mhivaAccueil h1{
+  color: white;
+  text-align: center;
+  font-size: 10vw;
+}
+
+#accountAccueil{
+  width: 75%;
+  text-align: center;
+  margin: 10% 12.5%;
+}
+
+#accountAccueil a{
+  color: white;
+  text-decoration:none;
+  font-size: 8vw;
+  display: block;
+  margin: 10% 10%;
+  padding: 10%;
+  background-color: #5FA2D9;
+}
+/*///////////////ACCUEIL ARTICLE///////////////////*/
+.lienArticle{
+  text-decoration:none;
+  text-align: center;
+  cursor: pointer;
+  background: #333;
+  color: white;
+  font-size: 1rem;
+}
+/*///////////////Create Account///////////////////*/
+.formAccount{
+  display: table;
+  text-align: center;
+  font-size:5vw;
+  background-color: #5FA2D9;
+  color: white;
+  width: 80%;
+  margin: 10%;
+}
+
+.formDiv{
+  padding:  3vw;
+}
+
+.buttonFormAccount{
+  padding: 2% 20%;
+  cursor: pointer;
+  background: #333;
+  color: white;
+  margin-bottom: 5%;
+}
+
+.formAccount label, .formAccount input {
+    display: table-cell;
+    margin-bottom: 10px;
+}
+/*////////////CUSTOMER ACCOUNT/////////////*/
+.articleCustomerAccount{
+  text-align:center;
+  height:31vh;
+  background-color:red;
+}
+
+.articleCustomerAccount p{
+  margin:0;
+  padding-top:10vh;
+}
+
+#sectionCustomerAccount h2{
+  margin:0;
+}
+
+textarea {
+  resize: none;
+}
+/*//////////////////YOUR ACCOUNT/////////////////////*/
+#mainYourAccount{
+  
+}
+/*//////////////////ADMIN/////////////////////*/
+.tableAdmin{
+  font-size: 1rem;
+}
+
+.tableAdmin{
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+.tableAdmin td, .tableAdmin th {
+    border: 1px solid #ddd;
+  padding: 8px;
+}
+
+
+.tableAdmin th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #FFA500 ;
+  color: white;
+}
+
+/*//////////////////MEDIA SCREEN/////////////////////*/
+
+@media (min-width: 600px) {
+  body {
+    background: green;
+  }
+}

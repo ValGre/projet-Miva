@@ -1,0 +1,41 @@
+<main id="mainYourAccount">
+  <h2>Votre Compte</h2>
+    <p>Articles rédigés par vous</p>
+    <table class="tableAdmin">
+      <thead>
+        <tr>
+          <th>Titres des articles</th>
+          <th>Dates</th>
+          <th>Lire L'article</th>
+          <th>Statut</th>
+        </tr>
+      </thead>
+      <tbody>
+      <?php foreach($articles as $article):?>
+        <tr>
+          <td><?=$article['titleArticles']?></td>
+          <td><?=$article['dateArticles']?></td>
+          <td><a class="lienArticle" href="index.php?admin=articleDetails&id=<?=$article['idArticles']?>">Lire</a></td>
+          <td><?=$article['checkedArticles']?></td>
+        </tr>
+      <?php endforeach;?>
+      </tbody>
+    </table>
+  <p>Articles enregistrés</p>
+  <table class="tableAdmin">
+    <thead>
+      <tr>
+          <th>Titres des articles</th>
+          <th></th>
+      </tr>
+    </thead>
+    <tbody>
+    <?php foreach($savedArticles as $savedArticle):?>
+      <tr>
+        <td><?=$savedArticle['titleArticles']?></td>
+        <td><a class="lienArticle" href="index.php?admin=articleDetails&id=<?=$article['idArticles']?>">Lire</a></td>
+      </tr>
+    <?php endforeach;?>
+    </tbody>
+  </table>
+</main>
