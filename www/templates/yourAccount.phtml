@@ -13,10 +13,10 @@
       <tbody>
       <?php foreach($articles as $article):?>
         <tr>
-          <td><?=$article['titleArticles']?></td>
-          <td><?=$article['dateArticles']?></td>
-          <td><a class="lienArticle" href="index.php?admin=articleDetails&id=<?=$article['idArticles']?>">Lire</a></td>
-          <td><?=$article['checkedArticles']?></td>
+          <td><?=htmlspecialchars($article['titleArticles'])?></td>
+          <td><?=htmlspecialchars($article['dateArticles'])?></td>
+          <td><a class="lienArticle" href="index.php?page=articleDetails&id=<?=htmlspecialchars($article['idArticles'])?>">Lire</a></td>
+          <td><?=htmlspecialchars($article['checkedArticles'])?></td>
         </tr>
       <?php endforeach;?>
       </tbody>
@@ -32,8 +32,8 @@
     <tbody>
     <?php foreach($savedArticles as $savedArticle):?>
       <tr>
-        <td><?=$savedArticle['titleArticles']?></td>
-        <td><a class="lienArticle" href="index.php?admin=articleDetails&id=<?=$article['idArticles']?>">Lire</a></td>
+        <td><?=htmlspecialchars($savedArticle['titleArticles'])?></td>
+        <td><a class="lienArticle" href="index.php?page=articleDetails&id=<?=htmlspecialchars($savedArticle['idArticles'])?>">Lire</a></td>
       </tr>
     <?php endforeach;?>
     </tbody>

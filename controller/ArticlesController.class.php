@@ -4,11 +4,17 @@ class ArticlesController{
 
   public function displayArticle($id){
 
-    $ArticlesModel = new ArticlesModel();
-    $article = $ArticlesModel->getArticle($id);
+    $displayButton = true;
 
     $SaveModel = new SaveModel();
     $verif = $SaveModel->getSavedArticles($id);
+
+    if ($verif['idArticles'] == $id) {
+      $displayButton = false;
+    }
+
+    $ArticlesModel = new ArticlesModel();
+    $article = $ArticlesModel->getArticle($id);
 
     $template='article';
     include 'www/templates/layout.phtml';

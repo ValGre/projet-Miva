@@ -16,6 +16,7 @@ class AdminController{
 
     public function connectAdmin(){
 
+      //si le formulaire est rempli 
       if(!empty($_POST)){
         $form = ['nameAdmin' => $_POST['nameAdmin'],
                 'passwordAdmin' =>$_POST['passwordAdmin']];
@@ -24,6 +25,7 @@ class AdminController{
         $AdminsModel = new AdminsModel();
         $password = $AdminsModel->getpassword($form);
 
+      //verifie si le mot de passe envoyé correspond
       if(password_verify($_POST['passwordAdmin'], $password['passwordAdmin'])){
         unset($_SESSION['user']);
         $_SESSION['admin'] = $_POST['nameAdmin'];
@@ -34,13 +36,6 @@ class AdminController{
           header("Location: index.php?admin=admin");
         }
       }
-    }
-
-    public function getDataArticles(){
-
-      $ArticlesModel = new ArticlesModel();
-      $articles = $ArticlesModel->getArticles();
-      echo json_encode ($articles);
     }
 
     public function displayAdmin(){

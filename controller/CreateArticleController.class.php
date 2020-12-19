@@ -16,7 +16,7 @@ class CreateArticleController{
                 'textArticles' => $_POST['textArticles'],
                 'checkedArticles' => 'Vérification'];
       }
-var_dump($form);
+
       $ArticlesModel=new ArticlesModel();
       $ArticlesModel->createArticle($form);
 

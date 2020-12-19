@@ -9,7 +9,7 @@
       <tbody>
       <?php foreach($articles as $article):?>
         <tr>
-          <td><?=$article['titleArticles']?></td>
+          <td><?=htmlspecialchars($article['titleArticles'])?></td>
           <td><a class="lienArticle" href="index.php?admin=articleDetails&id=<?=$article['idArticles']?>">Lire</a></td>
         </tr>
       <?php endforeach;?>

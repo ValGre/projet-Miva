@@ -1,10 +1,9 @@
 <main>
-  <form method="post"action="index.php?page=createArticleSubmit">
-    <label for="titleArticles" maxlength="50">Titre</label>
-    <input type="text" name="titleArticles">
-    <p>(50 caractères maximum)</p>
-    <label for="textArticles">Texte</label>
-    <textarea name="textArticles"  rows="15" cols="80"></textarea>
-    <button></button>
+  <form id="formNewArticle"method="post"action="index.php?page=createArticleSubmit">
+    <p><label for="titleArticles"  maxlength="50">Titre :</label></p>
+    <p><input id="titleArticles" placeholder="(50 caractères maximum)" type="text" name="titleArticles"></p>
+    <p><label for="textArticles">Texte :</label></p>
+    <p><textarea id="textArticles" name="textArticles"  rows="9" cols="80"></textarea></p>
+    <button type="submit">Créer</button>
   </form>
 </main>

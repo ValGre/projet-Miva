@@ -68,15 +68,15 @@ if(isset($_GET['page'])){
         $YourAccountController=new YourAccountController();
         $YourAccountController->saveArticle($_GET['id']);
     break;
+    case 'articleDetails':
+        $ArticlesController=new ArticlesController();
+        $ArticlesController->displayArticle($_GET['id']);
+    break;
     default:
     }
 }
 else if(isset($_GET['ajax'])){
     switch($_GET['ajax']){
-    case 'getDataArticles':
-        $AdminController=new AdminController();
-        $AdminController->getDataArticles();
-    break;
     case 'saveArticle':
         $idArticle=$_POST["idArticle"];
         $YourAccountController=new YourAccountController();

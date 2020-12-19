@@ -13,12 +13,13 @@
     <tbody>
     <?php foreach($articles as $article):?>
       <tr>
-        <td><?=$article['titleArticles']?></td>
-        <td><?=$article['auteurArticles']?></td>
-        <td><?=$article['dateArticles']?></td>
-        <td><a href="index.php?admin=articleDetails&id=<?=$article['idArticles']?>">V</a></td>
-        <td><a href="index.php?admin=articleChecked&id=<?=$article['idArticles']?>&check=<?=$article['checkedArticles']?>"><?=$article['checkedArticles']?></a></td>
-        <td><button type="button" id="<?=$article['idArticles']?>" class="deleteArticleButton">X</button></td>
+        <td><?=htmlspecialchars($article['titleArticles'])?></td>
+        <td><?=htmlspecialchars($article['auteurArticles'])?></td>
+        <td><?=htmlspecialchars($article['dateArticles'])?></td>
+        <td><a href="index.php?admin=articleDetails&id=<?=htmlspecialchars($article['idArticles'])?>">V</a></td>
+        <td>
+          <a href="index.php?admin=articleChecked&id=<?=htmlspecialchars($article['idArticles'])?>&check=<?=htmlspecialchars($article['checkedArticles'])?>"><?=htmlspecialchars($article['checkedArticles'])?></a></td>
+        <td><button type="button" id="<?=htmlspecialchars($article['idArticles'])?>" class="deleteArticleButton">X</button></td>
       </tr>
     <?php endforeach;?>
     </tbody>
@@ -35,10 +36,10 @@
     <tbody>
     <?php foreach($users as $user):?>
       <tr>
-        <td><?=$user['pseudo']?></td>
-        <td><?=$user['emailUser']?></td>
-        <td><?=$user['lastNameUser']?></td>
-        <td><?=$user['firstNameUser']?></td>
+        <td><?=htmlspecialchars($user['pseudo'])?></td>
+        <td><?=htmlspecialchars($user['emailUser'])?></td>
+        <td><?=htmlspecialchars($user['lastNameUser'])?></td>
+        <td><?=htmlspecialchars($user['firstNameUser'])?></td>
       </tr>
     <?php endforeach;?>
     </tbody>

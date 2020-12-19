@@ -1,5 +1,7 @@
-<main>
-    <h1><?=$article['titleArticles']?></h1>
-    <p><?=$article['textArticles']?></p>
-    <button type="button" id="<?=$article['idArticles']?>" class="saveArticleButton">Enregistrer</button>
+<main id="article" >
+    <h1><?=htmlspecialchars($article['titleArticles'])?></h1>
+    <p><?=htmlspecialchars($article['textArticles'])?></p>
+    <?php if ($displayButton):?>
+    <button type="button" id="<?=htmlspecialchars($article['idArticles'])?>" class="saveArticleButton">Enregistrer</button>
+  <?php endif ?>
 </main>
